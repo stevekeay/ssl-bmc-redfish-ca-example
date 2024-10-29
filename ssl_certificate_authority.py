@@ -20,7 +20,10 @@ class CA:
     is the certificate that we "import" so it becomes trusted by the client
     systems that need to make https requests.
 
-    `openssl req -x509 -new -nodes -key ca_key.pem -sha256 -days 3652 -subj "/CN=Official Corporate CA/OU=Undercloud/O=Rackspace" -out ca_cert.pem`
+    `openssl req \
+      -x509 -new -nodes -key ca_key.pem -sha256 -days 3652\
+      -subj "/CN=Official Corporate CA/OU=Undercloud/O=Rackspace"\
+      -out ca_cert.pem`
 
     Example usage:
 
